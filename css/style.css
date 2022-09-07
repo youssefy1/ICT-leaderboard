@@ -1,0 +1,93 @@
+body {
+    font-family: 'Nunito', sans-serif;
+
+    color: #333;
+    padding: 0;
+    margin: 0;
+    background-color: #181c26;
+}
+a {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+}
+
+.container {
+    width: 20em;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* leaderboard */
+.leaderboard {
+    background: linear-gradient(to bottom, #3a404d, #181c26);
+    height: 100%;
+}
+
+/* head */
+.leaderboard .head {
+    padding: 20px 16px;
+    color: snow;
+    font-size: 20px;
+    text-align: center;
+}
+.leaderboard .head h1 {
+    display: inline-block;
+    margin-left: 4px;
+}
+
+/* body */
+.leaderboard .body {
+    color: snow;
+}
+.leaderboard ol {
+    counter-reset: number;
+    padding-left: 0;
+}
+.leaderboard li {
+    padding: 16px;
+    display: flex;
+}
+.leaderboard li mark {
+    flex-grow: 1;
+    color: snow;
+    background-color: transparent;
+}
+.leaderboard li:before {
+    counter-increment: number;
+    content: counter(number) "."; 
+    margin-right: 4px;
+}
+.leaderboard li:nth-child(1) {
+    background: #fa6855;
+}
+.leaderboard li:nth-child(2) {
+    background: #e0574f;
+}
+.leaderboard li:nth-child(3) {
+    background: #d7514d;
+}
+.leaderboard li:nth-child(4) {
+    background: #cd4b4b;
+}
+.leaderboard li:nth-child(5) {
+    background: #c24448;
+}
+
+@media screen and (min-width: 1190px) {
+    .container {
+        width: 80%;
+    }
+    .body {
+        width: 80%;
+        padding-left: 10%;
+        font-size: 1.2rem;
+    }
+}
